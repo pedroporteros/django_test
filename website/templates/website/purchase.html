@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+   <html lang='en'>
+   <head>
+       <meta charset='UTF-8'>
+       {% block title %}<title>Purchase Form</title>{% endblock %}
+       {% load static %}
+       <link rel='stylesheet' href="{% static 'website/styles.css' %}">
+   </head>
+   <body>
+        <section class='main-content'>
+            <div>
+                <form method='POST'>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class='standard-button' type='submit' value='Submit'>
+                </form>
+            </div>
+        </section>
+
+   </body>
+</html>

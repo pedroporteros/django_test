@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+   <html lang='en'>
+   <head>
+       <meta charset='UTF-8'>
+       {% block title %}<title>Balance Form</title>{% endblock %}
+       {% load static %}
+       <link rel='stylesheet' href="{% static 'website/styles.css' %}">
+   </head>
+   <body>
+        <section class='main-content'>
+            <div>
+                <table>
+                    <tr><th>User</th><th>Balance</th></tr>
+                    {% for user in user_balances %}
+                        <tr><td>{{ user.user.email }}</td><td>{{ user.balance|floatformat:2 }}</td></tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+
+   </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+   <html lang='en'>
+   <head>
+       <meta charset='UTF-8'>
+       {% block title %}<title>Deposit Form</title>{% endblock %}
+       {% load static %}
+       <link rel='stylesheet' href="{% static 'website/styles.css' %}">
+   </head>
+   <body>
+        <section class='main-content'>
+            <div>{{user.email}}/{{balance|floatformat:2}}</div>
+        </section>
+
+   </body>
+</html>
